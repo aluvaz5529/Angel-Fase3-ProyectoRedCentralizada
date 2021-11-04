@@ -1,4 +1,5 @@
 id:Name:Description:Path
 :dep-castellon-upv:Unidad Organizativa de castellón del dominio UPV:dc=castellon,dc=upv,dc=es
 :W10:Unidad Organizativa de castellón de los equipos windows10 del dominio UPV:OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
+:Ubuntu:Unidad Organizativa de castellón de los equipos Ubuntu del dominio UPV:OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 
