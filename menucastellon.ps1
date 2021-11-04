@@ -20,17 +20,14 @@ do
      switch ($input)
      {
            '1' {
-                Clear-Host
-                $dominio= "upv"
-                $suf= "es"
-                $domainComponent="dc="+$dominio+",dc="+$suf
-                Write-Host $domainComponent
-                $ficheroCsvUO=Read-Host "Introduce el fichero csv de UO's:"
-                $fichero = import-csv -Path $ficheroCsvUO -delimiter :
-                foreach($line in $fichero)
-        {
-             New-ADOrganizationalUnit -Description:$line.Description -Name:$line.Name -Path:$domainComponent -ProtectedFromAccidentalDeletion:$true
-        }
+	   
+	   	$ficheroCsvUO=Read-Host "Introduce el fichero csv de UO's"
+		$fichero = import-csv -Path $ficheroCsvUO -delimiter :
+		foreach($line in $fichero)
+		{
+		   New-ADOrganizationalUnit -Description:$line.Description -Name:$line.Name -Path:$line.Path -ProtectedFromAccidentalDeletion:$true
+		}
+	   
                 return
            } '2' {
                 Clear-Host
