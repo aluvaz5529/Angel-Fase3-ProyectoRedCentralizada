@@ -12,3 +12,4 @@ $fichero = import-csv -Path $fileUsersCsv -Delimiter :
 foreach($linea in $fichero)
 {
 	Add-ADGroupMember -Identity $linea.Group -Members $linea.Name
+	}
