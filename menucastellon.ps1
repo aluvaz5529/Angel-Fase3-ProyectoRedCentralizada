@@ -12,7 +12,7 @@ function mostrar_Submenu
      Write-Host "1: Crear Unidades Organizativas."
      Write-Host "2: Crear Grupos."
      Write-Host "2: Crear Usuarios y equipos."
-     Write-Host "s: "
+     Write-Host "s: salir"
 do
 {
      $input = Read-Host "Por favor, pulse una opcion"
@@ -88,8 +88,30 @@ do
      { 
            '1' { 
                 Clear-Host  
-                'Primera Opción' 
+               $ficheroCsvUO=Read-Host "Introduce el fichero csv de UO's"
+$fichero = import-csv -Path $ficheroCsvUO -delimiter :
+foreach($line in $fichero)
+{
+   New-ADOrganizationalUnit -Description:$line.Description -Name:$line.Name -Path:$line.Path -ProtectedFromAccidentalDeletion:$false
+}
+$gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
+$fichero = import-csv -Path $gruposCsv -delimiter :
+foreach($linea in $fichero)
+
+{
+	New-ADGroup -Name:$linea.Name -Description:$linea.Description -GroupCategory:$linea.Category -GroupScope:$linea.Scope -Path:$linea.Path
+}
+	       
+	       
+	       
+	       
                 pause
+		
+		
+		
+		
+		
+		
            } '2' { 
                 Clear-Host  
                 'Segunda Opción' 
