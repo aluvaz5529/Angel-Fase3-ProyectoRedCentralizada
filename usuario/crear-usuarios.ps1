@@ -1,3 +1,12 @@
+#version 2 creo que esta funciona
+
+
+
+
+
+
+
+
 $dominio="campus-castellon"
 $sufijo="es"
 $dc="dc="+$dominio+",dc="+$sufijo
@@ -35,3 +44,8 @@ foreach($linea_leida in $fichero_csv_importado)
             -Path $rutaContenedor
 
 }
+
+
+
+
+
