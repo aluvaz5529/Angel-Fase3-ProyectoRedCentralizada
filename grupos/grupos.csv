@@ -1,12 +1,12 @@
 Name:Path:Description:Category:Scope
-Usuarios_r:OU=dep.castellon.upv:Grupo global de usuarios de upv:Security:Global
-equipos_r:OU=dep.castellon.upv:Grupo global de equipos de upv:Security:Global
+Usuarios_r:OU=dep-castellon-upv:Grupo global de usuarios de upv:Security:Global
+equipos_r:OU=dep-castellon-upv:Grupo global de equipos de upv:Security:Global
 
-Usuarios_s:OU=dep.castellon.upv:Grupo global de usuarios de upv:Security:Global
-equipos_s:OU=dep.castellon.upv:Grupo global de equipos de upv:Security:Global
+Usuarios_s:OU=dep-castellon-upv:Grupo global de usuarios de upv:Security:Global
+equipos_s:OU=dep-castellon-upv:Grupo global de equipos de upv:Security:Global
 
-Usuarios_i:OU=dep.castellon.upv:Grupo global de usuarios de upv:Security:Global
-equipos_i:OU=dep.castellon.upv:Grupo global de equipos de upv:Security:Global
+Usuarios_i:OU=dep-castellon-upv:Grupo global de usuarios de upv:Security:Global
+equipos_i:OU=dep-castellon-upv:Grupo global de equipos de upv:Security:Global
 
-Usuarios_u:OU=dep.castellon.upv:Grupo global de usuarios de upv:Security:Global
-equipos_u:OU=dep.castellon.upv:Grupo global de equipos de upv:Security:Global
+Usuarios_u:OU=dep-castellon-upv:Grupo global de usuarios de upv:Security:Global
+equipos_u:OU=dep-castellon-upv:Grupo global de equipos de upv:Security:Global
