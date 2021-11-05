@@ -8,7 +8,7 @@ id:Name:Description:Path
 :Secretaria:Unidad Organizativa de castellón de los equipos y usuario de secretaria del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 :Informatica:Unidad Organizativa de castellón de los equipos y usuario del aula de informatica del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 :Informatica:Unidad Organizativa de castellón de los equipos y usuario del aula de informatica del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
-:Equipos_U:Unidad Organizativa de castellón de los equipos de los servicios universitarios del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
-:Equipos_R:Unidad Organizativa de castellón de los equipos del Rectorado del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
-:Equipos_S:Unidad Organizativa de castellón de los equipos de Secretaria del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
-:Equipos_I:Unidad Organizativa de castellón de los equipos del aula de informatica del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
+:Equipos_U:Unidad Organizativa de castellón de los equipos de los servicios universitarios del dominio UPV:OU=Servicios_Universitarios,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
+:Equipos_R:Unidad Organizativa de castellón de los equipos del Rectorado del dominio UPV:OU=Rectorado,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
+:Equipos_S:Unidad Organizativa de castellón de los equipos de Secretaria del dominio UPV:OU=Secretaria,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
+:Equipos_I:Unidad Organizativa de castellón de los equipos del aula de informatica del dominio UPV:OU=Informatica,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
