@@ -1,5 +1,5 @@
 #Fuente: https://gallery.technet.microsoft.com/scriptcenter/Menu-simple-en-PowerShell-95e1f923
-function crearUo {
+function crearuo {
                 
 	$ficheroCsvUO=Read-Host "Introduce el fichero csv de UO's"
 	$fichero = import-csv -Path $ficheroCsvUO -delimiter :
@@ -56,7 +56,7 @@ do
      switch ($input)
      {
            '1'{
-	   crearUO
+	   crearuo
               return} 
 	   
 	   
@@ -108,7 +108,9 @@ do
      { 
            '1' { 
 	   Clear-Host
-                "aqui meter todas las funciones los nombres"
+               crearuo
+	       creargrupo
+	       crearequipo
                 pause}
 		
 		
