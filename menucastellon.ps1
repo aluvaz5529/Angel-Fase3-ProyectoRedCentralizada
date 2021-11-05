@@ -1,7 +1,19 @@
 #Fuente: https://gallery.technet.microsoft.com/scriptcenter/Menu-simple-en-PowerShell-95e1f923
+function crearUo {
+                
+	$ficheroCsvUO=Read-Host "Introduce el fichero csv de UO's"
+	$fichero = import-csv -Path $ficheroCsvUO -delimiter :
+	foreach($line in $fichero)
+	
+	   New-ADOrganizationalUnit -Description:$line.Description -Name:$line.Name -Path:$line.Path -ProtectedFromAccidentalDeletion:$true
+	}
+		
 
 #----------------Funcion Submenu  -------------#
 function mostrar_Submenu
+function crearUO
+
+
 {
      param (
            [string]$Titulo = 'Submenu.....'
@@ -18,16 +30,9 @@ do
      $input = Read-Host "Por favor, pulse una opcion"
      switch ($input)
      {
-           '1' {
-                
-	$ficheroCsvUO=Read-Host "Introduce el fichero csv de UO's"
-	$fichero = import-csv -Path $ficheroCsvUO -delimiter :
-	foreach($line in $fichero)
-	{
-	   New-ADOrganizationalUnit -Description:$line.Description -Name:$line.Name -Path:$line.Path -ProtectedFromAccidentalDeletion:$true
-	}
-		
-                return
+           '1'
+	   crearUO
+              return
            } 
 	   
 	   
