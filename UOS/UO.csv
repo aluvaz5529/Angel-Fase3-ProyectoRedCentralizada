@@ -3,7 +3,7 @@ id:Name:Description:Path
 :dep-castellon-upv:Unidad Organizativa de castellón del dominio UPV:dc=castellon,dc=upv,dc=es
 :W10:Unidad Organizativa de castellón de los equipos windows10 del dominio UPV:OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 :Ubuntu:Unidad Organizativa de castellón de los equipos Ubuntu del dominio UPV:OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
-:departamento_Universitario:Unidad Organizativa de castellón de los equipos y usuario del departamento del dominio UPV:OU=Ubuntu,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
+:Servicios_Universitarios:Unidad Organizativa de castellón de los equipos y usuario del departamento del dominio UPV:OU=Ubuntu,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 :Rectorado:Unidad Organizativa de castellón de los equipos y usuario del Rectorado del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 :Secretaria:Unidad Organizativa de castellón de los equipos y usuario de secretaria del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 :Informatica:Unidad Organizativa de castellón de los equipos y usuario del aula de informatica del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
