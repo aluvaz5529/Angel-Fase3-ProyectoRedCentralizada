@@ -1,6 +1,49 @@
 #version 2 creo que esta funciona
 
 
+$fileUsersCsv=Read-Host "Introduce el fichero csv de los usuarios:"
+$fichero = import-csv -Path $fileUsersCsv -Delimiter :
+foreach($linea in $fichero)
+{
+$containerPath =$linea.Path+","+$domainComponent
+}
+$passAccount=ConvertTo-SecureString $linea.DNI -AsPlainText -force
+
+$nameShort=$linea.Name+'.'+$linea.FirstName
+	$Surnames=$linea.FirstName+' '+$linea.LastName
+	$nameLarge=$linea.Name+' '+$linea.FirstName+' '+$linea.LastName
+	$email=$nameShort+"@"+$dominio+"."+$sufijoDominio
+
+$nameShort=$linea.Name+'.'+$linea.FirstName+$linea.LastName
+
+[boolean]$Habilitado=$true
+	
+$ExpirationAccount = $linea.ExpirationAccount
+    	$timeExp = (get-date).AddDays($ExpirationAccount)
+
+New-ADUser -SamAccountName $nameShort -UserPrincipalName $nameShort -Name $nameShort `
+		-Surname $Surnames -DisplayName $nameLarge -GivenName $linea.Name -LogonWorkstations:$linea.Computer `
+		-Description "Cuenta de $nameLarge" -EmailAddress $email `
+		-AccountPassword $passAccount -Enabled $Habilitado `
+		-CannotChangePassword $false -ChangePasswordAtLogon $true `
+		-PasswordNotRequired $false -Path $containerPath -AccountExpirationDate $timeExp
+
+$cnGrpAccount="Cn="+$linea.Group+","+$containerPath
+	Add-ADGroupMember -Identity $cnGrpAccount -Members $nameShort
+
+
+
+
+
+
+
+
+
+
+
+#version1
+
+
 
 
 
