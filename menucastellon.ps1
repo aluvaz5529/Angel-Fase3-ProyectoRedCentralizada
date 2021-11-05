@@ -5,7 +5,7 @@ function todo
                 $fichero = import-csv -Path $ficheroCsvUO -delimiter :
                 foreach($line in $fichero)
 {
-   New-ADOrganizationalUnit -Description:$line.Descripcion -Name:$line.Name -Path:$line.Path -ProtectedFromAccidentalDeletion:$true
+   New-ADOrganizationalUnit -Description:$line.Descripcion -Name:$line.Name -Path:$line.Path -ProtectedFromAccidentalDeletion:$false
 }
                 $gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
                 $fichero = import-csv -Path $gruposCsv -delimiter :
@@ -74,15 +74,15 @@ function todo
 function quitartodo
 {
                 Clear-Host 
-                Set-ADOrganizationalUnit -Identity "OU=UsuariosALCOY,DC=alcoy,DC=upv,DC=es" -ProtectedFromAccidentalDeletion $false
-                Remove-ADOrganizationalUnit -Identity "OU=UsuariosALCOY,DC=alcoy,DC=upv,DC=es" -Recursive
+                Set-ADOrganizationalUnit -Identity "OU=dep-castellon-upv,DC=castellon,DC=upv,DC=es" -ProtectedFromAccidentalDeletion $false
+                Remove-ADOrganizationalUnit -Identity "OU=dep-castellon-upv,DC=castellon,DC=upv,DC=es" -Recursive
                 pause
 }
 function crearusuario
 
 {
                 Clear-Host
-                $user=Read-Host "nombre de la cuenta que quieres habilitar habilitar"
+                $user=Read-Host "nombre de la cuenta que quieres habilitar"
                 $path=Read-Host "Escribe el nombre del departamento de la cuenta"
                 Enable-ADAccount -Identity "CN=$user, OU=$path,OU=UsuariosALCOY,DC=alcoy,DC=upv,DC=es"
                 return
@@ -94,7 +94,7 @@ function crearusuario
 function crearuo
 {
 $name=Read-Host "Escribe el nombre de la uo a crear"
-New-ADOrganizationalUnit -Name:$name -Path:"DC=alcoy,DC=upv,DC=es" -ProtectedFromAccidentalDeletion:$true
+New-ADOrganizationalUnit -Name:$name -Path:"DC=castellon,DC=upv,DC=es" -ProtectedFromAccidentalDeletion:$true
 }
 
 
@@ -107,16 +107,20 @@ New-LocalGroup -Name $name -Description $descrip
 function crearquipo
 {
 $name=Read-Host "Escribe el nombre del equipo a crear"
-New-ADComputer -Enabled:$true -Name $name -Path "OU=OrdenadoresALCOY,OU=UsuariosALCOY,DC=alcoy,DC=upv,DC=es"
+New-ADComputer -Enabled:$true -Name $name -Path "OU=Equipos,OU=dep-castellon-upv,DC=castellon,DC=upv,DC=es"
 }
 
 
 function deshabilitarusuario
+
+
+
 {
                 Clear-Host
-                $user=Read-Host "Escribe el nombre de la cuenta a deshabilitar"
+		Write-Host "elige el departamento del que sea el usuario"
+                $usuario=Read-Host "Escribe el nombre de la cuenta a deshabilitar"
                 $path=Read-Host "Escribe el nombre del departamento"
-                Disable-ADAccount -Identity "CN=$user, OU=$path,OU=UsuariosALCOY,DC=alcoy,DC=upv,DC=es"
+                Disable-ADAccount -Identity "CN=$usuario, OU=$path,OU=,DC=castellon,DC=upv,DC=es"
                 return
                 pause
 }
@@ -129,7 +133,7 @@ Remove-LocalGroup -Name $name
 function deshabilitarequipo
 {
 $name=Read-Host "Escribe el nombre del equipo a eliminar"
-Set-ADComputer -Identity "CN=$name, OU=OrdenadoresALCOY,OU=UsuariosALCOY,DC=alcoy,DC=upv,DC=es" -Enable $false
+Set-ADComputer -Identity "CN=$name, OU=Equipos,OU=dep-castellon-upv,DC=castellon,DC=upv,DC=es" -Enable $false
 }
 function deshabilitaruo
 {
@@ -140,7 +144,10 @@ $name=Read-Host "Escribe el nombre de la uo que quieres deshabilitar"
                 pause
 }
 
-function mostrar_Submenu2
+
+
+
+function Submenu2
 {
      param (
            [string]$Titulo = 'Submenu'
@@ -222,7 +229,7 @@ do
            } 
      }
 }
-until ($input -eq 'q')
+until ($input -eq 's')
 }
 
 function Submenu1
@@ -252,7 +259,7 @@ do
                 return
            } '3' {
                 Clear-Host
-
+		dsquery user -name F*
                 return
            } 's' {
                 "Saliendo del submenu..."
@@ -296,6 +303,7 @@ do
                 quitartodo
            } '3' {  
                 Clear-Host
+		 Get-ADUser -filter * -SearchBase "dc=castellon,dc=upv,dc=es" | Select sAMAccountName
                 pause
            } '4' {  
                 Clear-Host
