@@ -1,14 +1,9 @@
 id:Name:Path:Description:Category:Scope
 #para la creación del grupo de los equipos y usuarios de Servicios Universitarios 
 :Usuarios_u:OU=Servicios_Universitarios,OU=Ubuntu,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es:Grupo global de usuarios de los servicios universitarios de upv:Security:Global
-:Equipos_u:OU=Servicios_Universitarios,OU=Ubuntu,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es:Grupo global de equipos de los servicios universitarios de upv:Security:Global
 #para la creación del grupo de los equipos y usuarios de Rectorado
 :Usuarios_r:OU=Rectorado,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es:Grupo global de usuarios del rectorado upv de upv:Security:Global
-:Equipos_r:OU=Rectorado,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es:Grupo global de equipos del rectorado upv:Security:Global
 #para la creación del grupo de los equipos y usuarios de Secretaria
 :Usuarios_s:OU=Secretaria,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es:Grupo global de usuarios de secretaria de upv:Security:Global
-:Equipos_s:OU=Secretaria,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es:Grupo global de equipos de secretaria de upv:Security:Global
 #para la creación del grupo de los equipos y usuarios del aula de informática
 :Usuarios_i:OU=Informatica,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es:Grupo global de usuarios del aula de informática de upv:Security:Global
-:Equipos_i:OU=Informatica,OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es:Grupo global de equipos del aula de informática de upv:Security:Global
-
