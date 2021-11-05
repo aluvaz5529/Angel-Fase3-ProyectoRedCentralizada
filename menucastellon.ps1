@@ -30,37 +30,15 @@ do
 	   
                 return
            } '2' {
-                Clear-Host
-                $dominio= "upv"
-                $sufijoDominio= "es"
-                $domainComponent="dc="+$dominio+",dc="+$sufijoDominio
-                Write-Host $domainComponent
-                $gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
-                $fichero = import-csv -Path $gruposCsv -delimiter :
-                foreach($linea in $fichero)
-            {
-                $pathObject=$linea.Path+","+$domainComponent
-                New-ADGroup -Name:$linea.Name -Description:$linea.Description `
-                -GroupCategory:$linea.Category `
-                -GroupScope:$linea.Scope  `
-                -Path:$pathObject
+		$gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
+		$fichero = import-csv -Path $gruposCsv -delimiter :
+		foreach($linea in $fichero)
 
-            }
-                $dominio= "upv"
-                $sufijo= "es"
-                $dc="dc="+$dominio+",dc="+$sufijo
 {
-  Import-Module ActiveDirectory 
-}
-
-$fileUsersCsv=Read-Host "Introduce el fichero csv de los usuarios:"
-$fichero = import-csv -Path $fileUsersCsv -Delimiter :
-
-foreach($linea in $fichero)
-{
-	Add-ADGroupMember -Identity $linea.Name -Members $linea.Group
+	New-ADGroup -Name:$linea.Name -Description:$linea.Description -GroupCategory:$linea.Category -GroupScope:$linea.Scope -Path:$linea.Path
 }
                 return
+		
            } '3' {
                
 $dominio= "upv"
