@@ -1,13 +1,13 @@
 Name:Path:Description:Category:Scope
-
+#para equipos y usuarios de servicios universitarios
 Usuarios_u:OU=Ubuntu,OU=dep-castellon-upv:Grupo global de usuarios de upv:Security:Global
 equipos_u:OU=Ubuntu,OU=dep-castellon-upv:Grupo global de equipos de upv:Security:Global
-
+#para equipos y usuarios de rectorado
 Usuarios_r:OU=W10,OU=dep-castellon-upv:Grupo global de usuarios de upv:Security:Global
 equipos_r:OU=W10,OU=dep-castellon-upv:Grupo global de equipos de upv:Security:Global
-
+#para equipos y usuarios de secretaria
 Usuarios_s:OU=W10,OU=dep-castellon-upv:Grupo global de usuarios de upv:Security:Global
 equipos_s:OU=W10,OU=dep-castellon-upv:Grupo global de equipos de upv:Security:Global
-
+#para equipos y usuarios de informática
 Usuarios_i:OU=W10,OU=dep-castellon-upv:Grupo global de usuarios de upv:Security:Global
 equipos_i:OU=W10,OU=dep-castellon-upv:Grupo global de equipos de upv:Security:Global
