@@ -12,23 +12,18 @@ function creargrupo{
 
 $gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
 $fichero = import-csv -Path $gruposCsv -delimiter :
-foreach($linea in $fichero)
+foreach($linea in $fichero)}
 
 function crearequipo
 {
 $equiposCsv=Read-Host "Introduce el fichero csv de Equipos:"
 $fichero= import-csv -Path $equiposCsv -delimiter ":"
-foreach($line in $fichero)
-	
+foreach($line in $fichero)	
 New-ADComputer -Enabled:$true -Name:$line.Computer -Path:$line.Path -SamAccountName:$line.Computer	
-}
-
-
-
 
 	New-ADGroup -Name:$linea.Name -Description:$linea.Description -GroupCategory:$linea.Category -GroupScope:$linea.Scope -Path:$linea.Path
-}
 
+}
 
 
 
