@@ -1,13 +1,13 @@
-Name:Path:Description:Category:Scope
+id:Name:Path:Description:Category:Scope
 #para equipos y usuarios de servicios universitarios
-Usuarios_u:OU=Servicios_Universitarios,OU=Ubuntu,OU=dep-castellon-upv:Grupo global de usuarios de los servicios universitarios de upv:Security:Global
-equipos_u:OU=Servicios_Universitarios,OU=Ubuntu,OU=dep-castellon-upv:Grupo global de equipos de los servicios universitarios de upv:Security:Global
+:Usuarios_u:OU=Servicios_Universitarios,OU=Ubuntu,OU=dep-castellon-upv:Grupo global de usuarios de los servicios universitarios de upv:Security:Global
+:equipos_u:OU=Servicios_Universitarios,OU=Ubuntu,OU=dep-castellon-upv:Grupo global de equipos de los servicios universitarios de upv:Security:Global
 #para equipos y usuarios de rectorado
-Usuarios_r:OU=Rectorado,OU=W10,OU=dep-castellon-upv:Grupo global de usuarios del rectorado upv:Security:Global
-equipos_r:OU=Rectorado,OU=W10,OU=dep-castellon-upv:Grupo global de equipos del rectorado upv:Security:Global
+:Usuarios_r:OU=Rectorado,OU=W10,OU=dep-castellon-upv:Grupo global de usuarios del rectorado upv:Security:Global
+:equipos_r:OU=Rectorado,OU=W10,OU=dep-castellon-upv:Grupo global de equipos del rectorado upv:Security:Global
 #para equipos y usuarios de secretaria
-Usuarios_s:OU=Secretaria,OU=W10,OU=dep-castellon-upv:Grupo global de usuarios de secretaria de upv:Security:Global
-equipos_s:OU=Secretaria,OU=W10,OU=dep-castellon-upv:Grupo global de equipos de secretaria de upv:Security:Global
+:Usuarios_s:OU=Secretaria,OU=W10,OU=dep-castellon-upv:Grupo global de usuarios de secretaria de upv:Security:Global
+:equipos_s:OU=Secretaria,OU=W10,OU=dep-castellon-upv:Grupo global de equipos de secretaria de upv:Security:Global
 #para equipos y usuarios de informática
-Usuarios_i:OU=Informatica,OU=W10,OU=dep-castellon-upv:Grupo global de usuarios del aula de informática de upv:Security:Global
-equipos_i:OU=Informatica,OU=W10,OU=dep-castellon-upv:Grupo global de equipos del aula de informática de upv:Security:Global
+:Usuarios_i:OU=Informatica,OU=W10,OU=dep-castellon-upv:Grupo global de usuarios del aula de informática de upv:Security:Global
+:equipos_i:OU=Informatica,OU=W10,OU=dep-castellon-upv:Grupo global de equipos del aula de informática de upv:Security:Global
