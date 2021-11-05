@@ -96,25 +96,9 @@ do
      switch ($input) 
      { 
            '1' { 
-                Clear-Host  
-               $ficheroCsvUO=Read-Host "Introduce el fichero csv de UO's"
-$fichero = import-csv -Path $ficheroCsvUO -delimiter :
-foreach($line in $fichero)
-{
-   New-ADOrganizationalUnit -Description:$line.Description -Name:$line.Name -Path:$line.Path -ProtectedFromAccidentalDeletion:$false
-}
-$gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
-$fichero = import-csv -Path $gruposCsv -delimiter :
-foreach($linea in $fichero)
-
-{
-	New-ADGroup -Name:$linea.Name -Description:$linea.Description -GroupCategory:$linea.Category -GroupScope:$linea.Scope -Path:$linea.Path
-}
-	       
-	       
-	       
-	       
-                pause
+	   Clear-Host
+                "aqui meter todas las funciones los nombres"
+                pause}
 		
 		
 		
@@ -123,7 +107,8 @@ foreach($linea in $fichero)
 		
            } '2' { 
                 Clear-Host  
-                'Segunda Opción' 
+                 Set-ADorganizationalUnit -Identify "OU=dep-castellon-upv,DC=castellon,DC=upv,DC=es"-ProtectedFromAccidentalDeletion $false
+		 Remove-ADorganizationalUnit-Identify "OU=dep-castellon-upv,DC=castellon,DC=upv,DC=es" -Recursive
                 pause
            } '3' {  
                 mostrar_Submenu      
