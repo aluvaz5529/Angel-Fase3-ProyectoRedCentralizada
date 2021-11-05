@@ -11,13 +11,12 @@ function crearUo {
 function creargrupo{
 
 $gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
-	$fichero = import-csv -Path $gruposCsv -delimiter :
-	foreach($linea in $fichero)
+$fichero = import-csv -Path $gruposCsv -delimiter :
+foreach($linea in $fichero)
 
-	
-		New-ADGroup -Name:$linea.Name -Description:$linea.Description -GroupCategory:$linea.Category -GroupScope:$linea.Scope -Path:$linea.Path
+
+	New-ADGroup -Name:$linea.Name -Description:$linea.Description -GroupCategory:$linea.Category -GroupScope:$linea.Scope -Path:$linea.Path
 }
-
 
 
 
@@ -37,37 +36,34 @@ function crearUO
     
      Write-Host "1: Crear Unidades Organizativas."
      Write-Host "2: Crear Grupos."
-     Write-Host "2: Crear Usuarios y equipos."
+     Write-Host "3: Crear Usuarios."
+     Write-Host "4: Crear Equipos."
      Write-Host "s: salir"
 do
 {
      $input = Read-Host "Por favor, pulse una opcion"
      switch ($input)
      {
-           '1'
+           '1'{
 	   crearUO
-              return
-           } 
+              return} 
 	   
 	   
 	   '2' {
-             creargrupo  
-	    
-	}
-	       
-	       
-	       
-                return
-           } 
+             creargrupo
+	  	return} 
 	   
 	   '3' {
                 'Opcion 3'
                 return
            } 
 	   
+	   4' {
+                'Opcion 3'
+                return
+           } 
 	   
-	   
-	   
+	      
      }
 }
 until ($input -eq 's')
