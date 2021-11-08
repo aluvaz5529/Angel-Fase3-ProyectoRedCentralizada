@@ -23,8 +23,9 @@ function todo
                 $fichero_csv_importado = import-csv -Path $fichero_csv -Delimiter : 			     
                 foreach($linea in $fichero_csv_importado)
 {
+
                 $gmail=$linea.A+"."+$linea.B+"."+$linea.C
-                $path="DC=alcoy,DC=upv,DC=es"
+                $path="DC=castellon,DC=upv,DC=es"
   	            $rutaContenedor=$linea.ContainerPath+","+$path
   	            $passAccount=ConvertTo-SecureString $linea.Dni -AsPlainText -force
 	            $name=$linea.Name
@@ -84,7 +85,7 @@ function crearusuario
                 Clear-Host
                 $user=Read-Host "nombre de la cuenta que quieres habilitar"
                 $path=Read-Host "Escribe el nombre del departamento de la cuenta"
-                Enable-ADAccount -Identity "CN=$user, OU=$path,OU=UsuariosALCOY,DC=alcoy,DC=upv,DC=es"
+                Enable-ADAccount -Identity "CN=$user, OU=$path,OU=dep-castellon-upv,DC=castellon,DC=upv,DC=es"
                 return
                 pause
 }
