@@ -5,7 +5,7 @@ $fileUsersCsv=Read-Host "Introduce el fichero csv de los usuarios:"
 $fichero = import-csv -Path $fileUsersCsv -Delimiter :
 foreach($linea in $fichero)
 {
-$containerPath =$linea.Path+","+$domainComponent
+$containerPath =$linea.Path+"OU=dep-castellon-upv"+$domainComponent
 }
 $passAccount=ConvertTo-SecureString $linea.DNI -AsPlainText -force
 
