@@ -1,4 +1,4 @@
-$gruposCsv=Read-Host "Introduce el fichero csv de Grupos:"
+$gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
 $fichero = import-csv -Path $gruposCsv -delimiter :
 foreach($linea in $fichero)
 
