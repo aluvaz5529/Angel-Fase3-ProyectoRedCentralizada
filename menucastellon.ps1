@@ -5,7 +5,7 @@ function todo
                 $fichero = import-csv -Path $ficheroCsvUO -delimiter :
                 foreach($line in $fichero)
 {
-   New-ADOrganizationalUnit -Description:$line.Descripcion -Name:$line.Name -Path:$line.Path -ProtectedFromAccidentalDeletion:$false
+   New-ADOrganizationalUnit -Description:$line.Descripcion -Name:$line.Name -Path:$linea.Path -ProtectedFromAccidentalDeletion:$false
 }
                 $gruposCsv=Read-Host "Introduce el fichero csv de Grupos"
                 $fichero = import-csv -Path $gruposCsv -delimiter :
@@ -17,7 +17,7 @@ function todo
                 $fichero= import-csv -Path $equiposCsv -delimiter ":"
                 foreach($line in $fichero)
 {
-   New-ADComputer -Enabled:$true -Name:$line.Computer -Path:$line.Path -SamAccountName:$line.Computer
+   New-ADComputer -Enabled:$true -Name:$line.Computer -Path:$linea.Path -SamAccountName:$line.Computer
 }
                 $fichero_csv=Read-Host "Introduce el fichero csv de los usuarios:"
                 $fichero_csv_importado = import-csv -Path $fichero_csv -Delimiter : 			     
@@ -26,7 +26,7 @@ function todo
 
                 $gmail=$linea.A+"."+$linea.B+"."+$linea.C
                 $path="DC=castellon,DC=upv,DC=es"
-  	            $rutaContenedor=$linea.ContainerPath+","+$path
+  	            $rutaContenedor=$linea.Path+","+$path
   	            $passAccount=ConvertTo-SecureString $linea.Dni -AsPlainText -force
 	            $name=$linea.Name
 	            $nameShort=$linea.Name+' '+$linea.Surname1
