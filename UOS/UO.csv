@@ -8,3 +8,5 @@ id:Name:Description:Path
 :Secretaria:Unidad Organizativa de castellón de los equipos y usuario de secretaria del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 :Informatica:Unidad Organizativa de castellón de los equipos y usuario del aula de informatica del dominio UPV:OU=W10,OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
 :Equipos:Unidad Organizativa de castellón de los equipos del dominio UPV:OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
+:Usuarios:Unidad Organizativa de castellón de los Usuarios del dominio UPV:OU=dep-castellon-upv,dc=castellon,dc=upv,dc=es
+
