@@ -2,7 +2,7 @@ $fichero_csv=Read-Host "Introduce el fichero csv de los usuarios:"
                 $fichero_csv_importado = import-csv -Path $fichero_csv -Delimiter :    
                 foreach($line in $fichero_csv_importado)
 {
-   $path="DC=vera,DC=upv,DC=es"
+   $path="DC=castellon,DC=upv,DC=es"
              $containerPath=$line.Path
              $passAccount=ConvertTo-SecureString $line.Dni -AsPlainText -force
            $name=$line.Name
